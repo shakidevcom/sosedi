@@ -1,0 +1,39 @@
+footer {
+  margin: 4em 0;
+
+  &:after {
+    @include clear();
+  }
+
+  .copyright {
+    color: rgba(255, 255, 255, .64);
+
+    .copyright__left,
+    .copyright__right {
+      font-size: .88em;
+
+      @include gridle_state(mobile) {
+        text-align: center !important;
+      }
+    }
+
+    a {
+      border-bottom-color: rgba(255, 255, 255, .32);
+      color: rgba(255, 255, 255, .64);
+    }
+
+    .copyright__left {
+      a {
+        margin-right: 1em;
+      }
+    }
+
+    .copyright__right {
+      text-align: right;
+
+      @include gridle_state(mobile) {
+        margin-top: 1em;
+      }
+    }
+  }
+}

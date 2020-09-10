@@ -1,0 +1,32 @@
+.pagination {
+  background: $color-background-lighter;
+  text-align: center;
+  list-style: none;
+  padding: 1em 2em;
+  margin: 0;
+  @include border-radius-bottom($radius);
+
+  li {
+    display: inline-block;
+
+    a {
+      color: $color-text-secondary;
+      padding: .25em .75em;
+      display: block;
+      border: none;
+      @include border-radius($radius);
+
+      &:hover {
+        background: $color-background-light;
+      }
+    }
+
+    &.is-active {
+      a {
+        color: $color-white;
+        background: #333;
+        font-weight: 700;
+      }
+    }
+  }
+}

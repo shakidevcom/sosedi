@@ -1,0 +1,161 @@
+header {
+  background: transparent;
+  padding: 2em 0;
+  z-index: 100;
+
+  @include gridle_state(mobile) {
+    padding-bottom: 1em;
+  }
+
+  @include gridle_state(tablet mobile) {
+    position: static;
+  }
+
+  .account {
+    position: absolute;
+    right: 3em;
+
+    @include gridle_state(mobile) {
+      display: none;
+    }
+
+    span {
+      color: $color-white;
+      font-size: .88em;
+      opacity: .64;
+    }
+  }
+
+  .brand {
+    .logotype {
+      font-family: 'Noto Sans';
+      display: inline-block;
+      border-bottom: none;
+      color: $color-white;
+      font-weight: 400;
+      @include non-select();
+    }
+
+    @include gridle_state(mobile tablet) {
+      margin: 0 0 2em 0;
+    }
+
+    .location {
+      margin: 0 0 0 1em;
+      display: inline-block;
+
+      .current {
+        color: $color-white;
+        font-size: .88em;
+        display: block;
+
+        i {
+          opacity: .64;
+        }
+
+        .label {
+          opacity: .64;
+
+          &:hover {
+            cursor: pointer;
+            opacity: 1;
+          }
+
+          &.is-no-hover {
+            cursor: default !important;
+            opacity: .64 !important;
+          }
+        }
+      }
+
+      .list {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .32);
+        background: rgba(0, 0, 0, .80);
+        display: inline-block;
+        position: absolute;
+        margin: .5em 0 0 0;
+        min-width: 120px;
+        list-style: none;
+        padding: .5em 1em;
+        display: none;
+        @include border-radius($radius);
+
+        li {
+          a {
+            opacity: .64;
+            font-size: .88em;
+            border-bottom: none;
+            color: $color-white;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+
+          &.is-active {
+            a {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    color: $color-white;
+    opacity: .64;
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  .menu {
+    white-space: nowrap;
+    overflow-x: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      position: relative;
+      margin: 0 2em 0 0;
+
+      @include gridle_state(mobile) {
+        margin: 0 1em 0 0;
+      }
+
+      a {
+        font-family: 'Noto Sans';
+        border-bottom: none;
+        color: $color-white;
+        opacity: .64;
+        display: block;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &.is-active {
+        a {
+          opacity: 1;
+        }
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+
+      &.is-logout {
+        float: right;
+
+        @include gridle_state(mobile) {
+          float: none;
+        }
+      }
+    }
+  }
+}

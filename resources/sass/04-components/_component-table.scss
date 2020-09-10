@@ -1,0 +1,230 @@
+.table {
+  overflow-x: auto;
+  margin: 0;
+
+  table {
+    border: none;
+    width: 100%;
+
+    .holder {
+      background: $color-background-lighter;
+      font-size: .88em;
+      padding: .5em;
+      @include border-radius($radius);
+
+      &.is-danger {
+        background: $color-danger;
+        color: $color-white;
+      }
+    }
+
+    tr {
+      th {
+        border-bottom: 1px solid #222;
+        color: $color-white;
+        white-space: nowrap;
+        font-weight: 700;
+        text-align: left;
+        background: #333;
+        padding: .5em;
+
+        span {
+          font-size: .88em;
+        }
+      }
+
+      &.is-filter {
+        th {
+          border-bottom: 1px solid $color-background-light;
+          background: $color-background-lighter;
+
+          .holder {
+            background: $color-background-light;
+            font-size: .88em;
+            height: 33px;
+            padding: 0 !important;
+            @include border-radius($radius);
+          }
+
+          input,
+          select {
+            font-weight: 400;
+            font-size: .88em;
+
+            @include gridle_state(tablet mobile) {
+              padding: .5em;
+            }
+          }
+
+          button {
+            font-weight: 400;
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+
+      td {
+        border-bottom: 1px solid $color-background-light;
+        background: $color-white;
+        white-space: nowrap;
+        padding: .5em;
+
+        .is-sms {
+          color: $color-text-primary;
+
+          &:hover {
+            color: $color-primary;
+            cursor: pointer;
+          }
+        }
+
+        &.is-checkbox {
+          width: 10px !important;
+        }
+
+        &.is-image {
+          img {
+            max-width: 50px;
+            max-height: 50px;
+            @include border-radius($radius);
+          }
+
+          .holder {
+            background: $color-background-light;
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            @include border-radius($radius);
+          }
+        }
+
+        &.is-icon {
+          a {
+            color: $color-text-primary;
+            margin-right: .5em;
+            border-bottom: none;
+
+            &:hover {
+              color: $color-primary;
+            }
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        .is-color {
+          border: 1px solid $color-background-light;
+          display: inline-block;
+          margin: 0 .5em -.125em 0;
+          height: 1em;
+          width: 1em;
+          @include border-radius($radius);
+        }
+
+        .is-label {
+          display: block;
+          min-width: 80px;
+        }
+
+        .is-details {
+          color: $color-text-secondary;
+          font-size: .88em;
+        }
+
+        form {
+          display: inline-block;
+        }
+      }
+
+      &:hover {
+        td {
+          background: #FDFDFD;
+        }
+      }
+
+      &.is-empty {
+        td {
+          background: $color-background-light;
+          color: $color-text-secondary;
+          border-bottom: none;
+          text-align: center;
+          padding: 4em 2em;
+        }
+      }
+
+      &.is-pr-high {
+        td {
+          background: #fcf2ff;
+        }
+      }
+
+      &.is-pr-middle {
+        td {
+          background: #F3FFF2;
+        }
+      }
+
+      &.is-canceled {
+        td {
+          background: #ffe2e2;
+        }
+      }
+
+      &.is-accepted {
+        td {
+          background: #F3FFF2;
+        }
+      }
+
+      &.is-not-accepted {
+        td {
+          background: #faffcf;
+        }
+      }
+
+      &.is-deleted {
+        td {
+          opacity: .64;
+        }
+
+        &:hover {
+          td {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+  }
+
+  &.is-card {
+    table {
+      tr {
+        td {
+          padding: 1em;
+
+          &.is-title {
+            border-right: 1px solid $color-background-light;
+            background: $color-background-lighter;
+            color: $color-text-secondary;
+            font-weight: 700;
+          }
+
+          &.is-key {
+            border-right: 1px solid $color-background-light;
+            background: $color-background-lighter;
+            color: $color-text-secondary;
+            text-align: right;
+            width: 220px;
+          }
+        }
+      }
+    }
+  }
+}
+.selectize-input.items.not-full {
+  height: 33px;
+}

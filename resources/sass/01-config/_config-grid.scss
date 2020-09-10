@@ -1,0 +1,28 @@
+@import "~gridle";
+
+@include gridle_setup((
+        context : 12,
+        gutter-width : 32px,
+        direction : ltr,
+));
+
+@include gridle_register_state (mobile, (
+        max-width : 480px
+));
+
+@include gridle_register_state (tablet, (
+        min-width : 481px,
+        max-width : 1024px
+));
+
+@include gridle_register_state (desktop, (
+        min-width : 1025px
+));
+
+@include gridle_register_state (tv, (
+        min-width : 1921px
+));
+
+@include gridle_register_state (landscape, (
+        query : "(orientation : landscape)"
+));

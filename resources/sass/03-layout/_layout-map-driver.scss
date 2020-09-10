@@ -1,0 +1,38 @@
+.map-driver {
+  background: $color-white;
+  position: fixed;
+  display: none;
+  z-index: 30;
+  bottom: 1em;
+  right: 1em;
+  left: 1em;
+  top: 1em;
+  @include border-radius($radius);
+
+  #map {
+    height: 100%;
+    width: 100%;
+    @include border-radius($radius);
+  }
+}
+
+.map-driver-button {
+  z-index: 20;
+
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+
+  span {
+    background: $color-primary;
+    color: $color-white;
+    padding: .5em 1em;
+    font-size: .88em;
+    display: block;
+    @include border-radius(100%);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

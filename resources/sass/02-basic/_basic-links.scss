@@ -1,0 +1,10 @@
+a {
+  border-bottom: 1px solid lighten($color-text-regular, 50%);
+  color: $color-text-regular;
+  text-decoration: none;
+  outline: 0;
+
+  &:hover {
+    border-bottom: none;
+  }
+}

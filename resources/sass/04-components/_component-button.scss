@@ -1,0 +1,196 @@
+.btn {
+  border: 1px solid $color-background-light;
+  background: $color-background-light;
+  color: $color-text-regular;
+  box-sizing: border-box;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: .5em 1em;
+  outline: none;
+  @include border-radius($radius);
+
+  @include gridle_state(mobile) {
+    margin: .5em 0;
+    display: block;
+    width: 100%;
+  }
+
+  &.is-small {
+    font-size: .88em;
+  }
+  padding: .5em 1em;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .64;
+  }
+
+  &:hover {
+    border-color: $color-background-lighter;
+    background: $color-background-lighter;
+    cursor: pointer;
+  }
+
+  &:active {
+    background: $color-background-dark;
+  }
+
+  &.is-outlined {
+    border-color: $color-background-light;
+    background: transparent;
+
+    &:hover {
+      border-color: $color-background-light;
+      background: $color-background-light;
+    }
+
+    &:active {
+      border-color: $color-background-dark;
+      background: $color-background-dark;
+    }
+  }
+
+  &.is-primary {
+    border-color: $color-primary;
+    background: $color-primary;
+    color: $color-white;
+
+    &:hover {
+      border-color: lighten($color-primary, 10%);
+      background: lighten($color-primary, 10%);
+    }
+
+    &:active {
+      border-color: darken($color-primary, 10%);
+      background: darken($color-primary, 10%);
+    }
+
+    &.is-outlined {
+      border: 1px solid lighten($color-primary, 10%);
+      background: transparent;
+      color: $color-primary;
+
+      &:hover {
+        border: 1px solid $color-primary;
+        background: $color-primary;
+        color: $color-white;
+      }
+
+      &:active {
+        border-color: darken($color-primary, 10%);
+        background: darken($color-primary, 10%);
+      }
+    }
+  }
+
+  &.is-success {
+    border-color: $color-success;
+    background: $color-success;
+    color: $color-white;
+
+    &:hover {
+      border-color: lighten($color-success, 10%);
+      background: lighten($color-success, 10%);
+    }
+
+    &:active {
+      border-color: darken($color-success, 10%);
+      background: darken($color-success, 10%);
+    }
+
+    &.is-outlined {
+      border: 1px solid lighten($color-success, 10%);
+      background: transparent;
+      color: $color-success;
+
+      &:hover {
+        border: 1px solid $color-success;
+        background: $color-success;
+        color: $color-white;
+      }
+
+      &:active {
+        border-color: darken($color-success, 10%);
+        background: darken($color-success, 10%);
+      }
+    }
+  }
+
+  &.is-danger {
+    border-color: $color-danger;
+    background: $color-danger;
+    color: $color-white;
+
+    &:hover {
+      border-color: lighten($color-danger, 10%);
+      background: lighten($color-danger, 10%);
+    }
+
+    &:active {
+      border-color: darken($color-danger, 10%);
+      background: darken($color-danger, 10%);
+    }
+
+    &.is-outlined {
+      border: 1px solid lighten($color-danger, 10%);
+      background: transparent;
+      color: $color-danger;
+
+      &:hover {
+        border: 1px solid $color-danger;
+        background: $color-danger;
+        color: $color-white;
+      }
+
+      &:active {
+        border-color: darken($color-danger, 10%);
+        background: darken($color-danger, 10%);
+      }
+    }
+  }
+
+  &.is-warning {
+    border-color: $color-warning;
+    background: $color-warning;
+    color: $color-white;
+
+    &:hover {
+      border-color: lighten($color-warning, 10%);
+      background: lighten($color-warning, 10%);
+    }
+
+    &:active {
+      border-color: darken($color-warning, 10%);
+      background: darken($color-warning, 10%);
+    }
+
+    &.is-outlined {
+      border: 1px solid lighten($color-warning, 10%);
+      background: transparent;
+      color: $color-warning;
+
+      &:hover {
+        border: 1px solid $color-warning;
+        background: $color-warning;
+        color: $color-white;
+      }
+
+      &:active {
+        border-color: darken($color-warning, 10%);
+        background: darken($color-warning, 10%);
+      }
+    }
+  }
+}
+
+.btn-between {
+  color: $color-text-secondary;
+  display: inline-block;
+  font-size: .88em;
+  margin: 0 1em;
+
+  @include gridle_state(mobile) {
+    display: none;
+  }
+}

@@ -1,0 +1,81 @@
+.message {
+  background: $color-background-lighter;
+  color: $color-text-regular;
+  margin: 0 1em 2em 1em;
+  padding: 2em;
+  @include border-radius($radius);
+
+  @include gridle_state(mobile) {
+    padding: 1em;
+  }
+
+  a {
+    border-bottom-color: lighten($color-text-regular, 40%);
+    color: $color-text-regular;
+
+    &:hover {
+      border-bottom: none;
+    }
+  }
+
+  p {
+    font-size: .88em;
+    margin: 0;
+  }
+
+  &.is-large {
+    text-align: center;
+    padding: 8em;
+    margin: 0;
+
+    p {
+      font-size: 1.5em;
+    }
+  }
+
+  &.is-small {
+    padding: 1em;
+  }
+
+  &.is-success {
+    background: lighten($color-success, 40%);
+    color: darken($color-success, 20%);
+
+    a {
+      border-bottom-color: lighten($color-success, 20%);
+      color: darken($color-success, 20%);
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &.is-warning {
+    background: lighten($color-warning, 30%);
+    color: darken($color-warning, 20%);
+
+    a {
+      border-bottom-color: lighten($color-warning, 20%);
+      color: darken($color-warning, 20%);
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &.is-danger {
+    background: lighten($color-danger, 20%);
+    color: darken($color-danger, 20%);
+
+    a {
+      border-bottom-color: lighten($color-danger, 20%);
+      color: darken($color-danger, 20%);
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+}

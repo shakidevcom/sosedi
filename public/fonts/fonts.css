@@ -1,0 +1,72 @@
+/*
+	This font software is the property of Commercial Type.
+
+	You may not modify the font software, use it on another website, or install it on a computer.
+
+	License information is available at http://commercialtype.com/eula
+	For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+	Copyright (C) 2016 Schwartzco Inc.
+	
+*/
+
+
+.PlatformOLX-Regular-Web {
+    font-family: "Platform OLX Web";
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+.PlatformOLX-RegularItalic-Web {
+    font-family: "Platform OLX Web";
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+.PlatformOLX-Medium-Web {
+    font-family: "Platform OLX Web";
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+.PlatformOLX-Bold-Web {
+    font-family: "Platform OLX Web";
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+	font-family: "Platform OLX Web";
+	src: url("PlatformOLX-Regular-Web.woff2") format("woff2"),
+		     url("PlatformOLX-Regular-Web.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: "Platform OLX Web";
+	src: url("PlatformOLX-RegularItalic-Web.woff2") format("woff2"),
+		     url("PlatformOLX-RegularItalic-Web.woff") format("woff");
+	font-weight: 400;
+	font-style: italic;
+	}
+
+@font-face {
+	font-family: "Platform OLX Web";
+	src: url("PlatformOLX-Medium-Web.woff2") format("woff2"),
+		     url("PlatformOLX-Medium-Web.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: "Platform OLX Web";
+	src: url("PlatformOLX-Bold-Web.woff2") format("woff2"),
+		     url("PlatformOLX-Bold-Web.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	}

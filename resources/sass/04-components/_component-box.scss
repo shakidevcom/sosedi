@@ -1,0 +1,49 @@
+.boxes {
+  padding: 0 1em;
+
+  @include gridle_state(mobile) {
+    display: none;
+  }
+
+  &:after {
+    @include clear();
+  }
+
+  &.is-first {
+    padding-top: 2em;
+  }
+
+  .about {
+    margin: 2em 0;
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    p {
+      margin: 1em 0 0 0;
+    }
+  }
+
+  .box {
+    background: $color-background-lighter;
+    text-align: center;
+    margin: 0 0 2em 0;
+    padding: 2em;
+    @include border-radius($radius);
+    @include non-select();
+
+    h6 {
+      color: $color-text-secondary;
+      font-weight: 500;
+      font-size: .88em;
+      margin: 0;
+    }
+
+    strong {
+      margin: .5em 0 0 0;
+      display: block;
+      font-size: 2em;
+    }
+  }
+}

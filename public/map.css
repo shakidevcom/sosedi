@@ -1,0 +1,147 @@
+body {
+	width: 100%;
+	height: 850px;
+	background-image: url(img/map.png);
+	background-size: 100% 100%; 
+}
+
+p, a {
+		font-family: 'Platform OLX Web', sans-serif;
+}
+
+.btn-olx {
+	margin-top: 1rem;
+	padding: 1rem;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	color: #002F34;
+	background-color: #23E5DB;
+	border: 2px solid #002F34;
+	border-radius: 100%;
+}
+
+.btn-olx p {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.btn.focus, .btn:focus {
+	box-shadow: none;
+}
+
+.modal-header {
+	border: none;
+}
+
+.modal-title {
+	font-weight: 500;
+	font-size: 27px;
+	line-height: 32px;
+	padding: 0 2rem;
+}
+
+.modal-footer {
+	border: none;
+}
+
+.about-location-title {
+	font-size: 18px;
+	line-height: 22px;
+	padding-bottom: 1.25rem;
+}
+
+.about-location-text {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.take-location-btn {
+	margin: 1.125rem 0;
+	padding: 0.75rem 1.25rem;
+	background-color: #23E5DB;
+	border-radius: 2rem;
+	border: 0;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	color: #002F34;
+}
+
+.label-title {
+	font-size: 18px;
+	line-height: 22px;
+	color: #002F34;
+}
+
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+.form-control {
+	width: 100%;
+	border-radius: 4px;
+}
+
+#exampleFormControlTextarea1 {
+	height: 210px;
+	resize: none;
+}
+
+.public-btn {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+	padding: 0.625rem 6rem;
+	border: none;
+	background: #23E5DB;
+	border-radius: 42px;
+	color: #002F34;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) { 
+	body {
+		background-image: url(img/map-mob.png);
+	}
+
+	.modal {
+		margin-right: 0!important;
+	}
+
+	.information-modal {
+		margin-left: 10%;
+	}
+}
+
+.location-close {
+	font-size: 2rem;
+}
+
+.information-container {
+	border: 1px solid #B7B7B7; 
+	border-radius: 4px;
+	padding: 0 1rem 10rem;
+}
+
+.information-text {
+	padding-top: 0.75rem;
+	font-size: 20px;
+	line-height: 24px;
+	color: #002F34;
+	border-bottom: 1px solid #BFBFBF;
+}
+
+.information-text span {
+	color: #757575;
+}
+
+#exampleFormControlTextarea2 {
+	height: 120px;
+	resize: none;
+}
+
+.form-check {
+	margin-bottom: 1.5rem;
+}

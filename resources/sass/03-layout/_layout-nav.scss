@@ -1,0 +1,60 @@
+nav {
+  background: transparent;
+  z-index: 50;
+
+  @include gridle_state(tablet mobile) {
+    position: static;
+    top: 0;
+  }
+
+  ul.menu {
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    white-space: nowrap;
+    overflow-x: auto;
+    list-style: none;
+    padding: 2em 0;
+    margin: 0;
+
+    @include gridle_state(mobile) {
+      padding: 1em 0;
+    }
+
+    &:after {
+      @include clear();
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 2em 0 0;
+
+      a {
+        color: $color-white;
+        border-bottom: none;
+        font-size: .88em;
+        opacity: .64;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+      &.is-active {
+        a {
+          opacity: 1;
+        }
+      }
+
+      &.is-devider {
+        span {
+          color: $color-white;
+          font-size: .88em;
+          opacity: .64;
+        }
+      }
+    }
+  }
+}

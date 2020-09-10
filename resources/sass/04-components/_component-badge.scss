@@ -1,0 +1,29 @@
+.badge {
+  background: $color-background-light;
+  color: $color-text-secondary;
+  display: inline-block;
+  margin: 0 .5em .5em 0;
+  padding: .2em .6em;
+  font-size: .88em;
+  @include border-radius($radius);
+  @include non-select();
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &.is-success {
+    background: lighten($color-success, 40%);
+    color: darken($color-success, 10%);
+  }
+
+  &.is-danger {
+    background: lighten($color-danger, 24%);
+    color: darken($color-danger, 10%);
+  }
+
+  &.is-warning {
+    background: lighten($color-warning, 24%);
+    color: darken($color-warning, 10%);
+  }
+}

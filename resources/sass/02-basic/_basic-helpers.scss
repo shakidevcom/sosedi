@@ -1,0 +1,97 @@
+// claer
+.is-clearfix {
+  clear: both;
+}
+
+// display
+.is-display_none {
+  display: none !important;
+}
+
+.is-display_block {
+  display: block;
+}
+
+.is-display_inline-block {
+  display: inline-block;
+}
+
+// font
+.is-nowrap {
+  white-space: nowrap;
+}
+
+.is-text_bold {
+  font-weight: 700;
+}
+
+.is-text_primary {
+  color: $color-primary;
+}
+
+.is-text_info {
+  color: $color-text-secondary;
+}
+
+.is-text_warning {
+  color: $color-warning;
+}
+
+.is-text_success {
+  color: $color-success;
+}
+
+.is-text_danger {
+  color: $color-danger;
+}
+
+// text-align
+.is-text_left {
+  text-align: left;
+}
+
+.is-text_center {
+  text-align: center;
+}
+
+.is-text_right {
+  text-align: right;
+}
+
+.is-pull_left {
+  float: left;
+}
+
+.is-pull_right {
+  float: right;
+}
+
+// hidden
+.is-hide {
+  display: none;
+}
+
+.is-hide_desktop {
+  @include gridle_state(tablet mobile) {
+    display: none;
+  }
+}
+
+.is-hide_not-desktop {
+  @include gridle_state(desktop) {
+    display: none;
+  }
+}
+
+.is-hide_mobile {
+  @include gridle_state(desktopd tablet) {
+    display: none;
+  }
+}
+
+.is-hide_not-mobile {
+  @include gridle_state(mobile) {
+    display: none;
+  }
+}
+

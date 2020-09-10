@@ -1,0 +1,263 @@
+.form {
+  h2 {
+    margin: 0 0 1em 0;
+  }
+
+  .field {
+    margin: 0 0 2em 0;
+
+    &:after {
+      @include clear();
+    }
+
+    label {
+      color: $color-text-regular;
+      margin: 0 0 .5em 0;
+      font-weight: 700;
+      display: block;
+
+      span {
+        font-size: .88em;
+
+        strong {
+          color: $color-danger;
+        }
+
+        &.is-details {
+          color: $color-text-secondary;
+          margin-left: 1em;
+          font-weight: 400;
+
+          strong {
+            color: $color-text-secondary;
+          }
+        }
+      }
+    }
+
+    .help {
+      color: $color-text-secondary;
+      margin: .5em 0 0 0;
+
+      span {
+        font-size: .88em;
+      }
+    }
+
+    // TinyMCE
+    .mce-tinymce {
+      border: 1px solid $color-background-light;
+      color: $color-text-primary;
+      background: $color-white;
+      box-shadow: none;
+      @include border-radius($radius);
+
+      .mce-menubar {
+        display: none;
+      }
+
+      .mce-panel {
+        background: transparent;
+        border: none;
+        @include border-radius-bottom($radius);
+
+        .mce-btn-group:not(:first-child) {
+          border-left-color: $color-background-light;
+        }
+      }
+
+      .mce-top-part {
+        background: transparent;
+        border: none;
+        @include border-radius-top($radius);
+
+        &::before {
+          border-bottom: 1px solid $color-background-light;
+          box-shadow: none;
+        }
+      }
+
+      .mce-edit-area {
+        background: transparent;
+        @include border-radius-bottom($radius);
+
+        iframe {
+          @include border-radius-bottom($radius);
+        }
+      }
+    }
+
+    // Typeahed
+    .twitter-typeahead {
+      display: block;
+      width: 100%;
+    }
+
+    .tt-heading {
+      padding: 1em 1em 0 1em;
+      margin: 0;
+    }
+
+    .tt-menu {
+      border: 1px solid $color-background-light;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, .08);
+      background: $color-white;
+      margin: .5em 0;
+      width: 100%;
+      @include border-radius($radius);
+    }
+
+    .tt-suggestion {
+      color: $color-text-regular;
+      padding: .5em 1em;
+      margin: .5em 0;
+    }
+
+    .tt-suggestion:hover {
+      background: $color-background-lighter;
+      cursor: pointer;
+    }
+
+    .tt-suggestion.tt-cursor {
+      background-color: $color-background-lighter;
+    }
+
+    .tt-suggestion p {
+      margin: 0;
+    }
+
+    .empty-message {
+      background: $color-background-lighter;
+      text-align: center;
+      font-size: .8em;
+      padding: 1em;
+    }
+
+    input,
+    textarea,
+    select {
+      border: 1px solid $color-background-light;
+      color: $color-text-primary;
+      background: $color-white;
+      box-sizing: border-box;
+      padding: .5em 1em;
+      display: block;
+      resize: none;
+      width: 100%;
+      outline: none;
+      @include border-radius($radius);
+
+      &::-webkit-input-placeholder {
+        color: $color-text-placeholder;
+      }
+
+      &::-moz-placeholder {
+        color: $color-text-placeholder;
+      }
+
+      &:-moz-placeholder {
+        color: $color-text-placeholder;
+      }
+
+      &:-ms-input-placeholder {
+        color: $color-text-placeholder
+      }
+
+      &:focus {
+        border-color: $color-primary;
+      }
+
+      &:disabled {
+        background: $color-background-lighter;
+        cursor: not-allowed;
+      }
+    }
+
+    select {
+      -webkit-appearance: none;
+      background: url('/images/dropdown-dots.png') $color-white no-repeat calc(100% - .5em) center;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    textarea {
+      padding: 1em;
+    }
+
+    input[type=checkbox],
+    input[type=radio] {
+      display: inline-block;
+      width: auto;
+    }
+
+    &.is-invalidate {
+      .help {
+        color: $color-danger;
+      }
+
+      input,
+      select,
+      textarea {
+        border-color: lighten($color-danger, 24%);
+
+        &:focus {
+          border-color: $color-danger;
+        }
+      }
+    }
+  }
+
+  .section {
+    border-bottom: 1px solid $color-background-light;
+    padding: 2em 1em 0 1em;
+
+    @include gridle_state(mobile) {
+      padding: 1em 0 0 0;
+    }
+
+    &:after {
+      @include clear();
+    }
+
+    &.is-last {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+  }
+
+  .group {
+    margin: 0 0 1em 0;
+
+    &:after {
+      @include clear();
+    }
+  }
+
+  .is-checkbox {
+    label {
+      display: inline-block;
+      margin: 0 0 0 .5em;
+      cursor: pointer;
+    }
+
+    .field {
+      margin: 0 0 1em 0;
+      @include border-radius($radius);
+    }
+  }
+
+  .action {
+    border-top: 1px solid $color-background-light;
+    background: $color-background-lighter;
+    padding: 2em 1em;
+    @include border-radius-bottom($radius);
+
+    @include gridle_state(mobile) {
+      padding: 1em 0;
+    }
+
+    &:after {
+      @include clear();
+    }
+  }
+}

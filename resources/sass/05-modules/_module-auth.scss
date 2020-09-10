@@ -1,0 +1,45 @@
+.module-auth {
+  margin: 16em 0;
+
+  @include gridle_state(tablet) {
+    margin: 12em 0;
+  }
+
+  @include gridle_state(mobile) {
+    margin: 8em 0;
+  }
+
+  .block {
+    padding: 2em 1em;
+    margin: 2em 0;
+
+    .field {
+      margin: 0 0 1em 0;
+    }
+  }
+
+  .brand {
+    .logotype {
+      font-family: 'Noto Sans';
+      color: $color-white;
+      text-align: center;
+      font-size: 2em;
+    }
+  }
+
+  .copyright {
+    color: $color-white;
+    text-align: center;
+    font-size: .88em;
+    opacity: .64;
+
+    a {
+      border-bottom: 1px solid rgba(255, 255, 255, .4);
+      color: $color-white;
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+}

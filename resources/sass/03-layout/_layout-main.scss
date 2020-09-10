@@ -1,0 +1,220 @@
+@import '../01-config/config-grid';
+
+@include gridle_generate_classes ();
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background: #222;
+}
+
+body * {
+  // z-index: 1;
+}
+
+.background {
+  //background-image: -ms-linear-gradient(top left, #fc8b00 0%, #cd6e00 100%);
+  //background-image: -moz-linear-gradient(top left, #fc8b00 0%, #cd6e00 100%);
+  //background-image: -o-linear-gradient(top left, #fc8b00 0%, #cd6e00 100%);
+  //background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #fc8b00), color-stop(100, #cd6e00));
+  //background-image: -webkit-linear-gradient(top left, #fc8b00 0%, #cd6e00 100%);
+  //background-image: linear-gradient(to bottom right, #fc8b00 0%, #cd6e00 100%);
+  //border-bottom: 1px solid #e37b00;
+  background: $color-primary;
+  position: absolute;
+  height: 400px;
+  z-index: -1;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  @include gridle_state(tablet) {
+    height: 380px;
+  }
+
+  @include gridle_state(mobile) {
+    height: 360px;
+  }
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2em;
+
+  @include gridle_state(mobile) {
+    padding: 0;
+  }
+}
+
+.heading {
+  margin: 4em auto 2em;
+
+  @include gridle_state(tablet mobile) {
+    margin: 2em auto 1em;
+  }
+
+  h1 {
+    color: $color-white;
+    font-weight: 500;
+    font-size: 1.750em;
+
+    @include gridle_state(tablet) {
+      font-size: 1.5em;
+    }
+
+    @include gridle_state(mobile) {
+      font-size: 1.250em;
+    }
+  }
+
+  .action {
+    text-align: right;
+
+    @include gridle_state(mobile) {
+      text-align: left;
+
+      a {
+        color: $color-white;
+        border-bottom: none;
+        font-size: 1.2em;
+      }
+    }
+
+    .btn {
+      border: 1px solid rgba(255, 255, 255, .48);
+      color: $color-white;
+
+      &:hover {
+        border-color: $color-white;
+        background: $color-white;
+        color: $color-primary;
+      }
+
+      @include gridle_state(mobile) {
+        display: inline-block;
+        margin: 1em 0 0 0;
+        font-size: .88em;
+        width: auto;
+      }
+    }
+  }
+}
+
+.subheading {
+  margin: 4em auto 2em;
+
+  @include gridle_state(tablet mobile) {
+    margin: 1em auto .5em;
+  }
+
+  h2 {
+    color: $color-white;
+    font-weight: 500;
+    font-size: 1.5em;
+
+    @include gridle_state(tablet) {
+      font-size: 1.2em;
+    }
+
+    @include gridle_state(mobile) {
+      font-size: 1em;
+    }
+  }
+}
+
+.aside {
+  overflow: auto;
+
+  @include gridle_state(tablet mobile) {
+    margin: 2em 0 0 0;
+  }
+}
+
+.block {
+  background: $color-white;
+  box-sizing: border-box;
+  @include border-radius($radius);
+
+  &:after {
+    @include clear();
+  }
+
+  &.is-transparent {
+    background: transparent;
+  }
+
+  &.is-marged {
+    margin: 2em 0 0 0;
+  }
+}
+
+.navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    border-bottom: 1px solid $color-background-light;
+
+    a {
+      color: $color-text-secondary;
+      border-bottom: none;
+      font-size: .88em;
+      display: block;
+      padding: 1em;
+
+      &:hover {
+        background: $color-background-lighter;
+        color: $color-text-regular;
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.blocker {
+  background: rgba(0, 0, 0, .80);
+  position: fixed;
+  display: none;
+  z-index: 1000;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  .content {
+    color: $color-white;
+    text-align: center;
+    max-width: 560px;
+    padding: 8em 2em;
+    font-size: 2em;
+    margin: auto;
+
+    @include gridle_state(mobile) {
+      padding: 12em 2em;
+      font-size: 1.5em;
+      max-width: none;
+    }
+  }
+}
+
+.js-upload-preview {
+  margin: 1em 0 0 0;
+  max-height: 100px;
+  display: block;
+}

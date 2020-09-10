@@ -1,0 +1,48 @@
+.tooltip {
+  display: inline-block;
+  position: relative;
+
+  .tooltip-message {
+    background: rgba(0, 0, 0, .80);
+    white-space: nowrap;
+    color: $color-white;
+    text-align: center;
+    visibility: hidden;
+    position: absolute;
+    font-size: .66em;
+    padding: .5em 1em;
+    right: -1.5em;
+    bottom: 2.5em;
+    opacity: 0;
+    @include border-radius($radius);
+
+    &:after {
+      border: solid transparent;
+      right: calc(1.5em + 4px);
+      top: 100%;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-top-color: rgba(0, 0, 0, .80);
+      border-width: 4px;
+      margin-left: -4px;
+    }
+
+    &.is-info {
+      text-align: left;
+      left: -1.5em;
+      right: auto;
+
+      &:after {
+        left: 2.5em;
+      }
+    }
+  }
+
+  &:hover .tooltip-message {
+    visibility: visible;
+    opacity: 1;
+  }
+}

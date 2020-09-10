@@ -1,0 +1,68 @@
+.modal {
+  .modal_back {
+    background: rgba(0, 0, 0, .80);
+    position: fixed;
+    display: none;
+    z-index: 900;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .modal_wrapper {
+    position: fixed;
+    display: none;
+    z-index: 950;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .modal_body {
+    position: relative;
+    margin: 8em 0;
+    @include border-radius($radius);
+
+    @include gridle_state(tablet) {
+      margin: 4em 0;
+    }
+
+    @include gridle_state(mobile) {
+      margin: 2em 0;
+    }
+
+    .modal_header {
+      padding: 2em 2em 0 2em;
+
+      .close {
+        color: $color-text-placeholder;
+        font-size: 1.5em;
+        float: right;
+
+        &:hover {
+          color: $color-text-regular;
+          cursor: pointer;
+        }
+      }
+
+      h2 {
+        color: $color-text-primary;
+        font-size: 1.5em;
+        margin: 0;
+      }
+    }
+
+    .modal_content {
+      padding: 2em 2em 0 2em;
+      max-height: 320px;
+      overflow-y: auto;
+    }
+
+    .modal_footer {
+      border-top: 1px solid $color-background-light;
+      background: $color-background-lighter;
+      padding: 2em;
+    }
+  }
+}

@@ -1,0 +1,289 @@
+p, a {
+	font-family: 'Platform OLX Web', sans-serif;
+}
+
+/*headline styles start*/
+.headline-back {
+	background-image: url(img/back-img.jpg);
+	background-size: 100% 100%;
+}
+
+.headline-text {
+	color: #fff;
+	font-size: 3rem;
+	font-weight: 500;
+	line-height: 58px;
+	padding: 1rem 0 0.6rem 0;
+}
+
+.headline-lang-text {
+	font-size: 1.25rem;
+	padding-bottom: 0.6rem;
+}
+
+.headline-lang-link {
+	font-size: 1.25rem;
+	color: #002F34;
+}
+
+.headline-lang-link:hover {
+	color: #002F34; 
+}
+
+/*headldine styles end*/
+
+/*body-back styles start*/
+.body-back-color {
+	background-color: #cbf7ee;
+}
+/*body-back styles end*/
+
+/*about text styles start*/
+.about-text-container {
+	padding: 2.875rem 0.5rem 2.75rem 0.5rem;
+}
+
+.about-text-container p{
+	font-size: 20px;
+	line-height: 24px;
+	color: #002F34;
+}
+
+.about-text-left {
+	margin-right: 45px;
+}
+
+.about-text-right {
+	margin-left: 45px;
+}
+/*about text styles end*/
+
+/*choose section styles start*/
+.choose-section-container {
+	margin: 0 2rem 0 2rem;
+	padding-bottom: 2rem; 
+}
+
+.choose-section-container button {
+	width: 100%;
+	color: #002F34;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+	padding: 0.625rem 0;
+	border: 0;
+	background-color: transparent;
+}
+
+.choose-section-container button:focus {
+	outline: none;
+}
+
+.left-section-container {
+	border: 1px solid #000;
+	border-radius: 6px 0 0 6px;
+}
+
+.section-container-active {
+	background-color: #002F34;
+}
+
+.section-container-active button {
+	color: #fff!important;
+}
+
+.left-section-button button {
+	color: #002F34;
+}
+
+.right-section-button button {
+	color: #002F34;
+}
+
+.right-section-container {
+	border: 1px solid #000;
+	border-radius: 0 6px 6px 0;
+}
+
+.shafl-container-2 {
+	display: none;
+}
+/*choose section styles end*/
+
+/*shafl section styles start*/
+.shafl-title-text {
+	color: #002F34;
+	font-size: 36px;
+	line-height: 43px;
+}
+/*shafl section styles end*/
+
+/*card section styles start*/
+.cards-container {
+	padding-bottom: 2.75rem;
+}
+
+.card-container {
+	position: relative;
+	width: 12.3rem;
+	height: 15.7rem;
+	z-index: 2;
+}
+
+.card-container::after {
+	content: "";
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 81%;
+	z-index: -1;
+	border-radius: 20px;
+}
+
+.card-title {
+	color: #002F34;
+	font-weight: bold;
+	font-size: 72px;
+	line-height: 86px;
+	margin-bottom: 0.5rem;
+
+}
+
+.card-text {
+	padding: 0 0.8rem;
+	color: #002F34;
+	font-size: 16px;
+	line-height: 19px;
+
+}
+
+.card-img {
+	position: absolute;
+	bottom: 5%;
+}
+/*card section styles end*/
+
+/*shafl button styles start*/
+.shafl-btn-container {
+	padding-bottom: 1.75rem;
+}
+.button-link {
+	padding-bottom: 2rem;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 29px;
+	color: #002F34;
+	padding: 0.5rem 3rem;
+	background-color: #23E5DB;
+	border-radius: 10px;
+}
+
+.button-link:hover {
+	color: #002f34;
+}
+/*shafl button styles end*/
+.safety-law-title {
+	font-size: 24px;
+	line-height: 29px;
+	color: #002F34;
+}
+
+/*safety-law section styles start*/
+.safety-law-container-background {
+	background-color: #cbf7ee; 
+}
+
+.card-header {
+	position: relative;
+	background-color: #23E5DB;
+	border-radius: 0!important;
+	border: 0;
+}
+
+.btn-link {
+	font-size: 24px;
+	line-height: 29px;
+	color: #002F34;
+}
+
+.btn.focus, .btn:focus {
+	box-shadow: none!important;
+}
+
+.btn-link:hover {
+	color: #002F34;
+}
+
+.accordion-body-container {
+	background-color: #cbf7ee;
+	color: #002F34;
+}
+
+.accordion-body-title {
+	font-size: 24px;
+	line-height: 29px;
+	padding: 0 8rem;
+}
+
+.accordion-body-text {
+	font-size: 16px;
+	line-height: 22px;
+	padding: 2rem 8rem;
+}
+
+.down-arrow-mob {
+	display: none;
+}
+/*safety-law section styles end*/
+
+/*safety card section styles start*/
+.accordion-safety-cards-container {
+	padding: 0 5rem 1.5rem 5rem;
+}
+
+.safety-card-container {
+	padding: 2.875rem 0 0 0;
+	width: 50%;
+}
+
+.safety-card-img {
+	width: 50px;
+	height: 50px;
+}
+
+.safety-card-text {
+	margin-left: 0.8rem;
+	width: 70%;
+	font-size: 18px;
+	line-height: 22px;
+}
+/*safety card section styles end*/
+
+/*footer section styles start*/
+.footer-background {
+	background-color: #002F34;
+}
+
+.footer-logo-link {
+	padding: 1.125rem;
+}
+/*footer section styles end*/
+
+/*kaz headline style start*/
+.kaz-headline-px {
+	padding: 1rem 8rem 0.6rem 8rem;
+}
+/*kaz headline style end*/
+
+/*kaz card text style start*/
+.kaz-card-text {
+	font-size: 12px;
+}
+/*kaz card text style end*/
+
+/*footer law text style start*/
+.footer-law-text {
+	background-color: #23E5DB;
+}
+/*footer law text style end*/
